@@ -26,7 +26,7 @@ export class CartoonController {
     public cartoonRepository : CartoonRepository,
   ) {}
 
-  @post('/cartoons')
+/*  @post('/cartoons')
   @response(200, {
     description: 'Cartoon model instance',
     content: {'application/json': {schema: getModelSchemaRef(Cartoon)}},
@@ -46,6 +46,7 @@ export class CartoonController {
   ): Promise<Cartoon> {
     return this.cartoonRepository.create(cartoon);
   }
+*/
 
   @get('/cartoons/count')
   @response(200, {
@@ -76,6 +77,7 @@ export class CartoonController {
     return this.cartoonRepository.find(filter);
   }
 
+/*
   @patch('/cartoons')
   @response(200, {
     description: 'Cartoon PATCH success count',
@@ -94,6 +96,7 @@ export class CartoonController {
   ): Promise<Count> {
     return this.cartoonRepository.updateAll(cartoon, where);
   }
+*/
 
   @get('/cartoons/{id}')
   @response(200, {
@@ -111,6 +114,7 @@ export class CartoonController {
     return this.cartoonRepository.findById(id, filter);
   }
 
+/*
   @patch('/cartoons/{id}')
   @response(204, {
     description: 'Cartoon PATCH success',
@@ -147,4 +151,5 @@ export class CartoonController {
   async deleteById(@param.path.number('id') id: number): Promise<void> {
     await this.cartoonRepository.deleteById(id);
   }
+*/
 }
