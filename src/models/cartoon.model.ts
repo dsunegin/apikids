@@ -61,6 +61,14 @@ export class Cartoon extends Entity {
   })
   publishUp?: string;
 
+    @property({
+        type: 'number',
+        precision: 10,
+        scale: 0,
+        mysql: {columnName: 'published', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'Y'},
+    })
+    published?: number;
+
   @property({
     type: 'string',
     length: 65535,
