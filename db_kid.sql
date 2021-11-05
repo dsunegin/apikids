@@ -1,9 +1,9 @@
-CREATE DATABASE kid CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE video CHARACTER SET utf8 COLLATE utf8_general_ci;
 create user kid_user@localhost;
 set password for kid_user@localhost=password('psw_kid_user');
-grant all on kid.* to kid_user@localhost with grant option;
+grant all on video.* to kid_user@localhost with grant option;
 
-use kid;
+use video;
 
 CREATE TABLE cartoon (
 id INT(7) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -13,8 +13,8 @@ video TEXT,
 image TEXT,
 description TEXT,
 created DATETIME DEFAULT  CURRENT_TIMESTAMP,
-publish_up DATETIME,
-published INT(1) UNSIGNED DEFAULT 0,
+publish_up DATETIME DEFAULT  CURRENT_TIMESTAMP,
+published INT(1) UNSIGNED DEFAULT 1,
 url TEXT,
 youtube_channel TEXT,
 ru INT(1) UNSIGNED DEFAULT 0,

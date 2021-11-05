@@ -9,7 +9,7 @@ const config = {
   port: 3306,
   user: 'kid_user',
   password: 'psw_kid_user',
-  database: 'kid'
+  database: 'video'
 };
 
 // Observe application's life cycle to disconnect the datasource when
