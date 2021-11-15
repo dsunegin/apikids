@@ -1,7 +1,6 @@
 # Create user for Cron Backup of Database
 #create user backup_user@localhost;
 #set password for backup_user@localhost=password('psw_backup_user');
-111
 
 CREATE DATABASE video CHARACTER SET utf8 COLLATE utf8_general_ci;
 create user kid_user@localhost;
